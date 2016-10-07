@@ -10,3 +10,4 @@
 ##Future Goal
 - unlink like buttons
   1. currently on click updates everyones likes not just the individual likes
+- on load start likes at 0 instead of start 0 on click

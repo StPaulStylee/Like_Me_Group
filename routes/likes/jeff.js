@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 
 //var that holds likes
-var jeffLikes = '0';
+var jeffLikes = '1';
 
 //on get send var adrian likes and adds plus one then turns to string
 router.get('/',function (req, res) {

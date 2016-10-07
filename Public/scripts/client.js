@@ -15,36 +15,62 @@ $.ajax({
         $div.append('<p>'+ blueBirds.bio + '</p>');
         $div.append('<img src = "'+ blueBirds.image +'"alt="be glad you can not see this"/>');//add date to list
         $div.append('<button type="click" class="likeButton">Like Me</button>');
-        $div.append('<div class="classy"></div>')
+        $div.append('<span class="classy"></span>');
         $('#thatHoldsItAll').append($div);
 
     });
   }
 });//end of ajax
 
-
-//ajax to get likes
-//function adLikes() {
+//adrians
+$(this).on('click', 'button' , function () {
+   //console.log('Super fun time alright.');
+   //ajax to get likes
   $.ajax({
     type: 'GET',
-    url: '/adrian',
-    success: function(likes){
-      $(this).on('click', 'button' , function () {
-        console.log('Super fun time alright.');
-        //update like count
-        //append to classy div
-        // $('.classy').text()
-
-
+    url: '/likes/adrian',
+    success: function(adrianLikes){
+      //update like count
+      //append to classy div
+        $('.classy').text(adrianLikes);
+        //console.log('adrian get worked');
+      }
   });//end of ajax
-}
-
 });//end of click function
-//}
+
+//jeffs
+$(this).on('click', 'button' , function () {
+   //console.log('Super fun time alright.');
+   //ajax to get likes
+  $.ajax({
+    type: 'GET',
+    url: '/likes/jeff',
+    success: function(jeffLikes){
+      //update like count
+      //append to classy div
+        $('.classy').text(jeffLikes);
+        //console.log('adrian get worked');
+      }
+  });//end of ajax
+});//end of click function
 
 
-//ajax to post likes
-//trigger on button push
+//allys
+$(this).on('click', 'button' , function () {
+   //console.log('Super fun time alright.');
+   //ajax to get likes
+  $.ajax({
+    type: 'GET',
+    url: '/likes/ally',
+    success: function(allyLikes){
+      //update like count
+      //append to classy div
+        $('.classy').text(allyLikes);
+        //console.log('adrian get worked');
+      }
+  });//end of ajax
+});//end of click function
+
 
 
 

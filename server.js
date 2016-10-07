@@ -13,9 +13,9 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/bios', biosRouter);
-app.use('/likes/adrianLikes', adrianRouter);
-app.use('/likes/jeffLikes', jeffRouter);
-app.use('/likes/allyLikes', allyRouter);
+app.use('/likes/adrian', adrianRouter);
+app.use('/likes/jeff', jeffRouter);
+app.use('/likes/ally', allyRouter);
 
 
 
